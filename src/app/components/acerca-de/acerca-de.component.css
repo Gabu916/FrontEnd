@@ -8,12 +8,16 @@ div{
 /*Estilo foto de perfil*/
 @media(min-width: 576px){
     #fotoperfil{
-        position: absolute;
-        width: 12%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 4%;
-        top: 600px;
+        
+    }
+    
+
+    .descripcion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 /*estilo maximo foto de perfil*/
@@ -32,4 +36,7 @@ div{
     font-weight: bold;
     margin-top: 5%;
     margin-left: 10px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
 }

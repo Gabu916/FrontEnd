@@ -16,14 +16,14 @@ export class HysComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarSkills();
-    if(this.tokenService.getToken()){
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
   }
 
-  cargarSkills(): void{
+  cargarSkills(): void {
     this.skillS.lista().subscribe(
       data => {
         this.skill = data;
@@ -31,8 +31,8 @@ export class HysComponent implements OnInit {
     )
   }
 
-  delete(id: number){
-    if(id != undefined){
+  delete(id: number) {
+    if (id != undefined) {
       this.skillS.delete(id).subscribe(
         data => {
           this.cargarSkills();
