@@ -1,4 +1,54 @@
-img{
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.banner{
     width: 100%;
     height: 600px;
+    animation: banner 10s infinite linear alternate;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes banner{
+0%, 20%{
+    background-image: url(../../../assets/imagen/Autocad.png);
+}
+25%, 45%{
+    background-image: url(../../../assets/imagen/Reparador.jpg);
+}
+50%, 70%{
+    background-image: url(../../../assets/imagen/Programador.webp);
+}
+75%, 100%{
+    background-image: url(../../../assets/imagen/InstaladorR.jpg);
+}
+}
+
+.info h1{
+    color: #fff;
+    font-size: 45px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.welcome{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.capa{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
 }

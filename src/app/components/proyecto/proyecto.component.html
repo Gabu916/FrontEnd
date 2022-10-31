@@ -1,12 +1,29 @@
 <div class="row">
     <h1>Proyectos realizados</h1>
-    <Div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-            <h1>Portafolio Web</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis reprehenderit ab perspiciatis suscipit obcaecati illo consequuntur sequi porro nobis doloremque saepe facere odio quis error consequatur ipsam, quam cupiditate blanditiis!</p>
-        </div>
-        <div class="col-ms-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-            <img src="../../../assets/ejemplo.jpg" class="img-fluid img-proyecto">
-        </div>
-    </Div>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevoproy" *ngIf="isLogged">
+            Agregar Proyecto
+        </button>
+    </div>
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Proyecto of proyecto">
+                    <td>
+                        <h2>{{Proyecto.nombreP}}</h2>
+                    </td>
+                    <td>{{Proyecto.descripcionP}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-info" routerLink="/editproyec/{{Proyecto.id}}"><i
+                                class="bi bi-pencil-fill"></i>EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Proyecto.id)">
+                            <i class="bi bi-trash-fill"></i>BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
