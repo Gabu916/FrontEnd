@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '962789495531',
   },
   production: true,
-  URL:'https://backendcsg.herokuapp.com/'
+  URL:'https://abundant-leese-gabu916.koyeb.app/backendcsg/'
 };
